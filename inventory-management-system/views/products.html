@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Section</title>
+    <link rel="stylesheet" href="/public/css/Product.css">
+</head>
+<body>
+        <div class="container">
+        <div class="sidebar">
+            <h3>Admin DashBoard</h3>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/views/dashboard.html" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="/views/products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="/views/sales.html" class="nav-link">Sales</a></li>
+                <li class="nav-item"><a href="/views/suppliers.html" class="nav-link">Suppliers</a></li>
+                <li class="nav-item"><a href="/views/expense.html" class="nav-link">Expense Trackers</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <button id="toggle" class="hide-btn">X</button>
+            <div class="card">
+                <div class="top-sect">
+                    <div class="search">
+                        <input type="search" placeholder="Search Products....." id="SrchInput">
+                    </div>
+                    <div class="center"></div>
+                    <div class="actions">
+                            <button class="add-btn" id="add-btn">Add</button>
+                    </div>
+                </div>
+                
+                <!---Products Table-->
+                <table class="table">
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Status</th>
+                        <th>Supplier</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>Indomie chicken flavor</td>
+                        <td>5200</td>
+                        <td>84 cartons</td>
+                        <td>In Stock</td>
+                        <td>Dufil Prima Foods</td>
+                        <td><button class="view-btn">view more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Peak Milk Powder 400g</td>
+                        <td>3,500</td>
+                        <td>12 tins</td>
+                        <td>Low Stock</td>
+                        <td>FineslandCampina WAMCO</td>
+                        <td><button class="view-btn">view more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ariel Detergent 1kg</td>
+                        <td>850</td>
+                        <td>0</td>
+                        <td>Out of Stock</td>
+                        <td>Pz Cussons Nigeria</td>
+                        <td><button class="view-btn">view more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Coca Cola 35cl Bottle</td>
+                        <td>150</td>
+                        <td>156 bottles</td>
+                        <td>In Stock</td>
+                        <td>Nigerian Bottling Company</td>
+                        <td><button class="view-btn">view more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lux Bar soap 90g</td>
+                        <td>250</td>
+                        <td>6 bars</td>
+                        <td>Low Stock</td>
+                        <td>Unilever Nigeria</td>
+                        <td><button class="view-btn" id="view-btn">view more</button></td>
+                    </tr>
+                </table>
+            </div>
+            <!--Modal for Adding more Products-->
+            <div class="modal" id="application-modal">
+                <!--Product application Form-->
+                <form class="productForm" id="application-form">
+                    <div class="top">
+                        <div class="left"></div>
+                        <div class="center"></div>
+                        <div class="right">
+                            <button class="close-btn" id="close-btn">X</button>
+                        </div>
+                    </div>
+                    <div class="sect">
+                        <label for="ProductName">Product name</label>
+                        <input type="text" id="ProductName" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Price">Produc Price</label>
+                        <input type="number" id="Price" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Qty">Product Quantity</label>
+                        <input type="number" id="Qty" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Status">Stock Status</label>
+                        <input type="text"  id="Status" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Suppliers">Suppliers</label>
+                        <input type="text" id="Suppliers" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="TimeShipped">Shipping Time</label>
+                        <input type="time" id="TimeShipped" class="form-control">
+                    </div>
+                    <div class="sect">
+                        <label for="DateShipped">Shipping Date</label>
+                        <input type="date" id="DateShipped" class="form-control">
+                    </div>
+                    <button type="submit" class="submitBtn" id="SubmitBtn">Submit Form</button>
+                </form>
+            </div>
+
+            <!---Modal for Viewing more Details About Products-->
+            <div class="modal" id="ViewModal">
+                <div class="modal-animate">
+                    <div class="top">
+                        <div class="left"></div>
+                        <div class="center"></div>
+                        <div class="right">
+                            <button id="CloseBtnV" class="close-btn-v">X</button>
+                        </div>
+                    </div>
+                   <div class="sect">
+                    <h3>Product Name : <span id="productNameV">Product</span></h3>
+                   </div>
+                   <div class="sect">
+                       <p>Product Price : <span id="ProductPriceV">Price</span></p>
+                   </div>
+                   <div class="sect">
+                     <p>Product Quantity : <span id="ProductQtyV">Quantity</span></p>
+                   </div>
+                   <div class="sect">
+                    <p>Product Status : <span id="ProductStatus">Status</span></p>
+                   </div>
+                   <div class="sect">
+                    <p>suppliers: <span id="ProductSuppliersV">Suppliers</span></p>
+                   </div>         
+                   <div class="sect">
+                      <p>Shipping time: <span id="ShippingTimeV">Time Shipped</span></p>
+                    </div> 
+                    <div class="sect">
+                        <p>shipping date: <span id="ShippingDateV">Date Shipped</span></p>
+                    </div>
+                    <button class="edit-btn" id="EditBtn">Edit</button>
+                    <button class="delete-btn" id="DeleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/js/products.js"></script>
+</body>
+</html>
