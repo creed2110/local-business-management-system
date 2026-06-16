@@ -80,3 +80,13 @@ a{
     width:100%;
     cursor: pointer;
 }
+.table{
+    border: 1px solid black;
+    width:100%;
+    border-collapse: collapse;
+}
+td,th{
+    border:1px solid #e2e8f0;
+    padding:12px;
+    text-align: left;
+}
