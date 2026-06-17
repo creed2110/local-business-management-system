@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory-management-system</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/supplier.css">
+    <link rel="stylesheet" href="css/responsie.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Admin DashBoard</h3>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                <li class="nav-item"><a href="sales.html" class="nav-link">Sales</a></li>
+                <li class="nav-item"><a href="suppliers.html" class="nav-link">Suppliers</a></li>
+                <li class="nav-item"><a href="expense.html" class="nav-link">Expense Trackers</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="card-group">
+                <div class="card">
+                    <h3>Total Suppliers</h3>
+                    <br>
+                    <p style="text-align: center;">15</p>
+                </div>
+                <div class="card">
+                    <h3>Active Suppliers</h3>
+                    <br>
+                    <p style="text-align: center;">12</p>
+                </div>
+                <div class="card">
+                    <h3>New Suppliers</h3>
+                    <br>
+                    <p style="text-align: center;">3</p>
+                </div>
+            </div>
+            <div class="mini-nav">
+                <div class="left">
+                    <input type="search" placeholder="Search Suppliers" id="SrchInput" class="srch">
+                </div>
+                <div class="center"></div>
+                <div class="right">
+                    <button class="add-btn" id="addBtn" onclick="addModal()">
+                        Add
+                    </button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Phone</th>
+                        <th>email</th>
+                        <th>actions</th>
+                    </tr>
+                    <tr>
+                        <td>Gospel</td>
+                        <td>DevPixelStudios</td>
+                        <td>+234 7075343983</td>
+                        <td>officialdevpixelstudios@gmail.com</td>
+                        <td><button class="view-btn" id="viewBtn">View more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gospel</td>
+                        <td>DevPixelStudios</td>
+                        <td>+234 7075343983</td>
+                        <td>officialdevpixelstudios@gmail.com</td>
+                        <td><button class="view-btn" id="viewBtn">View more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gospel</td>
+                        <td>DevPixelStudios</td>
+                        <td>+234 7075343983</td>
+                        <td>officialdevpixelstudios@gmail.com</td>
+                        <td><button class="view-btn" id="viewBtn">View more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gospel</td>
+                        <td>DevPixelStudios</td>
+                        <td>+234 7075343983</td>
+                        <td>officialdevpixelstudios@gmail.com</td>
+                        <td><button class="view-btn" id="viewBtn">View more</button></td>
+                    </tr>
+                    <tr>
+                        <td>Gospel</td>
+                        <td>DevPixelStudios</td>
+                        <td>+234 7075343983</td>
+                        <td>officialdevpixelstudios@gmail.com</td>
+                        <td><button class="view-btn" id="viewBtn">View more</button></td>
+                    </tr>
+                </table>
+            </div>
+            <!--Modal for Adding Suppliers-->
+            <div class="modal" id="applicationModal">
+              <!-------------------Application form for adding suppliers------------------------>
+                <form class="modal-form" id="addSuppliersForm">
+                    <div class="top">
+                        <div class="left"></div>
+                        <div class="center"></div>
+                        <div class="right">
+                            <button class="close-btn" id="closeBtnA">X</button>
+                        </div>
+                    </div>
+                    <div class="sect">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="CompanyName">Company Name</label>
+                        <input type="text" id="CompanyName" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Phone">Phone Number</label>
+                        <input type="text" id="Phone" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Email">Email Address</label>
+                        <input type="email"  id="Email" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="ProductsSupplied">Products Supplied</label>
+                        <input type="text"  id="ProductsSupplied" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Address">Address</label>
+                        <input type="text" id="Address" class="form-control" required>
+                    </div>
+                    <div class="sect">
+                        <label for="Notes">Notes</label>
+                        <input type="text" id="Notes" class="form-control" required>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Submit</button>
+                </form>
+            </div>
+            <!---Modal for Viewing more details about a particular Supplier--->
+            <div class="modal" id="viewModal">
+              <div class="modal-animate">
+                 <div class="top">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right">
+                    <button class="close-btn" id="closeBtnV">X</button>
+                </div>
+                 </div>
+                 <div class="sect">
+                    <p>Product : <span>Product name</span> </p>
+                 </div>
+                 <div class="sect">
+                   <p>Company name :<span>Company name</span> </p>
+                 </div>
+                 <div class="sect">
+                   <p>Phone number : <span>Phone</span></p>
+                 </div>
+                 <div class="sect">
+                   <p>email : <span>email@gmail.com</span></p>
+                 </div>
+                 <div class="sect">
+                   <p>Product supplied : <span>Product supplied</span></p>
+                 </div>
+                 <div class="sect">
+                   <p>Address: <span>Address</span> </p>
+                 </div>
+                 <div class="sect">
+                   <p>notes : <span>Extra notes</span> </p>
+                 </div>
+                 <button class="edit-btn" id="editBtn">Edit</button>
+                 <button class="delete-btn" id="deleteBtn">Delete</button>
+            </div>
+         </div>
+       </div>
+    <script src="js/supplier.js"></script>
+</body>
+</html>

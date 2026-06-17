@@ -1,0 +1,218 @@
+/* ===========================================
+   GLOBAL RESPONSIVE STYLES
+   DevPixel Studios - Local Business Management System
+=========================================== */
+
+/* ===============================
+   Large Tablets (992px)
+================================ */
+@media (max-width:992px){
+
+.main{
+    padding:15px;
+}
+
+.sidebar{
+    width:220px;
+}
+
+.top{
+    gap:15px;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+table{
+    font-size:14px;
+}
+
+}
+
+/* ===============================
+   Tablets (768px)
+================================ */
+@media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:240px;
+    height:100vh;
+    z-index:1000;
+    transition:.3s ease;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+/* Main */
+
+.main{
+    width:100%;
+    padding:15px;
+}
+
+/* Menu Button */
+
+.hide-btn{
+    display:block;
+}
+
+/* Top Section */
+
+.top{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:15px;
+}
+
+/* Search */
+
+.search,
+.search input{
+    width:100%;
+}
+
+/* Buttons */
+
+.actions{
+    width:100%;
+}
+
+.actions button,
+.add-btn,
+.record-sale-btn{
+    width:100%;
+}
+
+/* Forms */
+
+form{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+}
+
+/* Cards */
+
+.card-container{
+    grid-template-columns:1fr;
+}
+
+/* Tables */
+
+.table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+
+table{
+    min-width:700px;
+    white-space:nowrap;
+}
+
+/* Modal */
+
+.modal-content,
+.productForm,
+.salesForm,
+.supplierForm{
+    width:95%;
+}
+
+}
+
+/* ===============================
+   Phones (480px)
+================================ */
+@media (max-width:480px){
+
+body{
+    font-size:14px;
+}
+
+.main{
+    padding:10px;
+}
+
+h1{
+    font-size:26px;
+}
+
+h2{
+    font-size:22px;
+}
+
+h3{
+    font-size:18px;
+}
+
+.sidebar h3{
+    font-size:18px;
+}
+
+th,
+td{
+    padding:10px;
+    font-size:13px;
+}
+
+button{
+    min-height:42px;
+}
+
+.modal-content,
+.productForm,
+.salesForm,
+.supplierForm{
+    width:97%;
+}
+
+}
+
+/* ===============================
+   Small Phones (320px)
+================================ */
+@media (max-width:320px){
+
+body{
+    font-size:13px;
+}
+
+.sidebar{
+    width:210px;
+}
+
+.sidebar h3{
+    font-size:16px;
+}
+
+th,
+td{
+    font-size:12px;
+}
+
+button{
+    font-size:12px;
+}
+
+    }
