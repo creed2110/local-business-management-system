@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inventory-management-system</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
     <!---DevPixelStudios Favicon------->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <div class="container">
@@ -22,11 +21,40 @@
             </ul>
         </div>
         <div class="main">
-            <button id="toggle" class="hide-btn">X</button>
-            <h3>Welcome  to your dashboard <span id="username">USER</span>!!!!</h3>
+            <div class="top">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right">
+                    <button class="logout-btn" id="logoutBtn">Log Out</button>
+                    <button class="edit-profile-btn" id="editBtn">Edit Profile</button>
+                </div>
+            </div>
+            <div class="card profile-card">
+                <div class="img-container">
+                    <img src="images/alex-suprun.jpg" alt="User Profile Image" class="user-img" >
+                </div>
+                <div class="sect">
+                   <p class="username">Username : <span id="Username">@Admin2026</span></p>
+                </div>
+                <div class="sect">
+                    <p>Email : <span id="UserEmail">admin@email.com</span></p>
+                </div>
+                <div class="sect">
+                    <p>Phone Number : <span id="Tel">+234 707 534 3989</span></p>
+                </div>
+                <div class="sect">
+                    <p>Organization  : <span id="Organization">DevPixelStudios</span></p>
+                </div>
+                <div class="sect">
+                    <p>Members : <span id="Members">12</span></p>
+                </div>
+                <div class="sect">
+                    <p class="role">Role : <span id="UserRole">Manager</span></p>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="/public/js/dashboard.js"></script>
+    <script src="js/settings.js"></script>
 </body>
 </html>
 

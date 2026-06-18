@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+}
+button{
+    cursor: pointer;
+}
+.sidebar{
+    background-color:#000;
+    color: #fff;
+    min-height:100vh;  
+    width:250px;
+    top:0;
+    left:0;
+    padding:1.5rem 1rem;
+}
+.sidebar h3{
+    text-align: center;
+    margin-top:10px;
+}
+.nav-list{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.nav-item{
+  text-align: center;
+  margin-top:30px;
+}
+.nav-link{
+    color: #ddd6d6;
+}
+.hide-btn{
+    background-color: blue;
+    color:white;
+    margin-bottom:30px;
+    height: 40px;
+    border:none;
+    border-radius: 12px;
+    width:30px;
+    display: none;
+}
+.main{
+    flex:1;
+    padding:20px;   
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.logout-btn{
+    background-color: red;
+    color:white;
+    height:30px;
+    width:60px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.edit-profile-btn{
+    background-color: green;
+    color:white;
+    height: 30px;
+    width:70px;
+    border:none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.card{
+    box-shadow:0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding:20px;
+    text-align: center;
+}
+.user-img{
+    height:150px;
+    width:160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.username{
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+.sect p{
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+}
+p.role{
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+}
