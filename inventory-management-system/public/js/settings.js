@@ -7,7 +7,12 @@ const ViewBtn = document.querySelectorAll('.view-btn');
 const EditBtn = document.getElementById('editBtn');
 const LogoutBtn = document.getElementById('logoutBtn');
 const ViewModal = document.getElementById('viewModal');
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
 
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
 ViewBtn.forEach(button => {
     button.addEventListener('click', () => {
        viewModal.style.display ='block';

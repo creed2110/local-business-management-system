@@ -320,10 +320,62 @@ table{
 }
 
 @media (max-width:480px){
+.menu-btn{
+    display:block;
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:1001;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#000;
+    color:#fff;
+
+    cursor:pointer;
+}
+/* Sidebar becomes dropdown */
 
 .sidebar{
 
+    position:fixed;
+
+    top:0;
+    left:-100%;
+
+    width:230px;
+    height:100vh;
+
+    transition:.3s;
+
+    padding-top:70px;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar h3{
     display:none;
+}
+
+.nav-list{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+}
+
+.nav-item{
+    width:100%;
+}
+
+.nav-link{
+    width:100%;
+    padding:15px 20px;
 }
 
 /* Hamburger */
