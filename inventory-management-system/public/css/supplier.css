@@ -1,1 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-grow: 1;
 
+}
+.sidebar{
+    background-color:#000;
+    color: #fff;
+    min-height:100vh;  
+    width:250px;
+    top:0;
+    left:0;
+    z-index:50;
+    padding:1.5rem 1rem;
+}
+.sidebar h3{
+    text-align: center;
+    margin-top:10px;
+}
+.nav-list{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.nav-item{
+  text-align: center;
+  margin-top:30px;
+}
+.nav-link{
+    color: #ddd6d6;
+}
+
+.main{
+    flex:1;
+    padding:20px;   
+}
+/* =========================
+   Large Tablets
+========================= */
+@media (max-width:992px){
+
+.sidebar{
+    width:220px;
+}
+
+.main{
+    padding:15px;
+}
+
+.sidebar h3{
+    font-size:20px;
+}
+
+.nav-item{
+    margin-top:25px;
+}
+
+}
+
+/* =========================
+   Tablets
+========================= */
+@media (max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-100%;
+    width:240px;
+    height:100vh;
+    transition:.3s ease;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.main{
+    width:100%;
+    padding:20px;
+}
+
+.hide-btn{
+    display:block;
+    width:45px;
+    height:45px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.main h3{
+    font-size:24px;
+    line-height:1.4;
+}
+
+}
+
+/* =========================
+   Phones
+========================= */
+@media (max-width:480px){
+
+.main{
+    padding:15px;
+}
+
+.main h3{
+    font-size:20px;
+}
+
+.sidebar{
+    width:220px;
+}
+
+.sidebar h3{
+    font-size:18px;
+}
+
+.nav-item{
+    margin-top:20px;
+}
+
+.nav-link{
+    font-size:15px;
+}
+
+.hide-btn{
+    width:40px;
+    height:40px;
+    font-size:16px;
+}
+
+}
+
+/* =========================
+   Small Phones
+========================= */
+@media (max-width:320px){
+
+.main h3{
+    font-size:18px;
+}
+
+.sidebar{
+    width:200px;
+}
+
+.sidebar h3{
+    font-size:16px;
+}
+
+.nav-link{
+    font-size:14px;
+}
+
+
+
+    }
