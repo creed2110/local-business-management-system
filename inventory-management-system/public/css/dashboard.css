@@ -44,16 +44,7 @@ a{
 .nav-link{
     color: #ddd6d6;
 }
-.hide-btn{
-    background-color: blue;
-    color:white;
-    margin-bottom:30px;
-    height: 40px;
-    border:none;
-    border-radius: 12px;
-    width:30px;
-    display: none;
-}
+
 .main{
     flex:1;
     padding:20px;   
