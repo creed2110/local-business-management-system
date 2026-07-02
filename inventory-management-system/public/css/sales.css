@@ -90,3 +90,118 @@ td,th{
     padding:12px;
     text-align: left;
 }
+/* =========================
+   Tablets
+========================= */
+@media (max-width:992px){
+
+.main{
+    padding:15px;
+}
+
+.top-sect{
+    gap:15px;
+}
+
+}
+
+/* =========================
+   Tablets & Large Phones
+========================= */
+@media (max-width:768px){
+
+.top-sect{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:15px;
+}
+
+.search{
+    width:100%;
+}
+
+#searchInput{
+    width:100%;
+}
+
+.actions{
+    width:100%;
+}
+
+.record-sale-btn{
+    width:100%;
+}
+
+.sales-form{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+
+.table{
+    min-width:700px;
+    white-space:nowrap;
+}
+
+.modal-content{
+    width:95%;
+}
+
+}
+
+/* =========================
+   Phones
+========================= */
+@media (max-width:480px){
+
+.main{
+    padding:10px;
+}
+
+.main h3{
+    font-size:22px;
+}
+
+th,
+td{
+    font-size:13px;
+    padding:10px;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+input,
+select{
+    width:100%;
+}
+
+}
+
+/* =========================
+   Small Phones
+========================= */
+@media (max-width:320px){
+
+.main h3{
+    font-size:18px;
+}
+
+th,
+td{
+    font-size:12px;
+}
+
+button{
+    font-size:12px;
+}
+
+    }
