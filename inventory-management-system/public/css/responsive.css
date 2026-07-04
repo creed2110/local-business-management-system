@@ -1,0 +1,23 @@
+/*responsiveness for tablets*/
+@media (max-width:992px) {
+    .main{
+        padding:15px;
+    }
+    .sidebar{
+        width:220px;
+    }
+    .sidebar h3{
+        font-size:20px;
+    }
+    .nav-item{
+        margin-top: 25px;
+    }
+
+}
+/* responsiveness for large phones*/
+@media (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    
+}
