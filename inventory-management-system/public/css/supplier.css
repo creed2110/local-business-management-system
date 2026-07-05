@@ -226,7 +226,10 @@ td,th{
 body{
     font-size:14px;
 }
-
+.card-group{
+    display: grid;
+    gap:20px;
+}
 .sidebar h3{
     font-size:18px;
 }
