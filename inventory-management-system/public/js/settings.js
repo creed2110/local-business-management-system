@@ -10,13 +10,14 @@ const ViewModal = document.getElementById('viewModal');
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.querySelector(".sidebar");
 
-menuBtn.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => { 
+
     sidebar.classList.toggle("active");
 });
 ViewBtn.forEach(button => {
     button.addEventListener('click', () => {
        viewModal.style.display ='block';
-    });
+    }); 
 });
 EditBtn.addEventListener('click', () => {
     ProfileModal.style.display = "block";
