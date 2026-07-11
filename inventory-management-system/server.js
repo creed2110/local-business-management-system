@@ -1,18 +1,11 @@
-import express from 'express';
-import path from 'path';
-import cors from 'cors';
-import fs from 'fs';
+import dotenv from "dotenv";
+import connectDB from "./config/database.js";
+import app from "./app.js"
 
-const app = express();
-app.use(cors());
-app.use(express.static('views'));
-app.use(express.static(path.join(__dirname, 'views', 'login.html')))
 
-app.get('/login', (req,res) =>{
-    res.sendFile(path.join(_dirname, 'views', 'Login.html'));
-});
+const PORT = 5000;
 
-const PORT = 3000;
-app.listen(PORT, () =>{
-    console.log(`running on http://localhost:${PORT}/`);
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
